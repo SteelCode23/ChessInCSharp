@@ -1,0 +1,203 @@
+﻿<Window x:Class="Chess__.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Chess__"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="438" Width="800">
+    <!--<UserControl x:Class="Chessboard.Cell"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d" 
+             d:DesignHeight="50" d:DesignWidth="50">
+        <Button Click="Button_Click"  Click="Button_Click"/>
+    </UserControl>-->
+    <Grid x:Name="chessGrid">
+        <Grid.Resources>
+            <Style TargetType="{x:Type Border}">
+                <Setter Property="Background" Value="White"/>
+                <Setter Property="BorderThickness" Value="1"/>
+                <Setter Property="BorderBrush" Value="DarkGray"/>
+            </Style>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="50"/>
+        </Grid.ColumnDefinitions>
+
+        <Button x:Name="Button00" Click="Button_Click" Grid.Row="0" Grid.Column="0">
+            <Image Margin="-7,-10,-9,-6" Source="/Resources/rook_black.png" Stretch="Fill"/>
+        </Button>
+        <Button x:Name="Button01" Click="Button_Click" Grid.Row="0" Grid.Column="1" Background="DarkGray">
+            <Image Margin="-8,-10,-8,-6" Source="/Resources/knight_black.png" Stretch="Fill"/>
+        </Button>
+        <Button x:Name="Button02" Click="Button_Click" Grid.Row="0" Grid.Column="2">
+            <Image Margin="-8,-8,-8,-8" Source="/Resources/bishop_black.png" Stretch="Fill" RenderTransformOrigin="0.297,0.36"/>
+        </Button>
+        <Button x:Name="Button03" Click="Button_Click" Grid.Row="0" Grid.Column="3" Background="DarkGray">
+            <Image Source="/Resources/king_black.png" Stretch="Fill" HorizontalAlignment="Center" Width="64" Height="64" VerticalAlignment="Center"/>
+        </Button>
+        <Button x:Name="Button04" Click="Button_Click" Grid.Row="0" Grid.Column="4">
+            <Image Source="/Resources/queen_black.png" Stretch="Fill" HorizontalAlignment="Center" Width="64" Height="64" VerticalAlignment="Center"/>
+        </Button>
+        <Button x:Name="Button05" Click="Button_Click" Grid.Row="0" Grid.Column="5" Background="DarkGray">
+            <Image Margin="-8,-8,-8,-8" Source="/Resources/bishop_black.png" Stretch="Fill" RenderTransformOrigin="0.297,0.36"/>
+        </Button>
+        <Button x:Name="Button06" Click="Button_Click" Grid.Row="0" Grid.Column="6">
+            <Image Margin="-8,-8,-8,-8" Source="/Resources/knight_black.png" Stretch="Fill"/>
+        </Button>
+        <Button x:Name="Button07" Click="Button_Click" Grid.Row="0" Grid.Column="7" Background="DarkGray">
+            <Image Margin="-8,-8,-8,-8" Source="/Resources/rook_black.png" Stretch="Fill"/>
+        </Button>
+
+        <Button x:Name="Button10" Click="Button_Click" Grid.Row="1" Grid.Column="0">
+            <Image Source="/Resources/pawn_black.png" Stretch="Fill" Margin="0,0,-2,-2"/>
+        </Button>
+
+        <!--<Button Click="Button_Click" Grid.Row="1" Grid.Column="0" Background="DarkGray"/>-->
+        <Button  x:Name="Button11" Click="Button_Click" Grid.Row="1" Grid.Column="1">
+            <Image Source="/Resources/pawn_black.png" Stretch="Fill" Margin="0,0,-2,-2"/>
+        </Button>
+        <Button x:Name="Button12" Click="Button_Click" Grid.Row="1" Grid.Column="2" Background="DarkGray">
+            <Image Source="/Resources/pawn_black.png" Stretch="Fill" Margin="0,0,-2,-2"/>
+        </Button>
+        <Button x:Name="Button13"  Click="Button_Click" Grid.Row="1" Grid.Column="3">
+            <Image Source="/Resources/pawn_black.png" Stretch="Fill" Margin="0,0,-2,-2"/>
+        </Button>
+        <Button x:Name="Button14"  Click="Button_Click" Grid.Row="1" Grid.Column="4" Background="DarkGray">
+            <Image Source="/Resources/pawn_black.png" Stretch="Fill" Margin="0,0,-2,-2"/>
+        </Button>
+        <Button x:Name="Button15"  Click="Button_Click" Grid.Row="1" Grid.Column="5" Background="DarkGray">
+            <Image Source="/Resources/pawn_black.png" Stretch="Fill" Margin="0,0,-2,-2"/>
+        </Button>
+
+        <Button x:Name="Button16"  Click="Button_Click" Grid.Row="1" Grid.Column="6" Background="DarkGray">
+            <Image Source="/Resources/pawn_black.png" Stretch="Fill" Margin="0,0,-2,-2"/>
+        </Button>
+        <Button x:Name="Button17"  Click="Button_Click" Grid.Row="1" Grid.Column="7">
+            <Image Source="/Resources/pawn_black.png" Stretch="Fill" Margin="0,0,-2,-2"/>
+        </Button>
+
+        <Button x:Name="Button20"  Click="Button_Click" Grid.Row="2" Grid.Column="0" Background="White"/>
+        <Button x:Name="Button21"  Click="Button_Click" Grid.Row="2" Grid.Column="1" Background="DarkGray"/>
+        <Button x:Name="Button22"  Click="Button_Click" Grid.Row="2" Grid.Column="2" Background="White"/>
+        <Button x:Name="Button23"  Click="Button_Click" Grid.Row="2" Grid.Column="3" Background="DarkGray"/>
+        <Button x:Name="Button24"  Click="Button_Click" Grid.Row="2" Grid.Column="4" Background="White"/>
+        <Button x:Name="Button25"  Click="Button_Click" Grid.Row="2" Grid.Column="5" Background="DarkGray"/>
+        <Button x:Name="Button26"  Click="Button_Click" Grid.Row="2" Grid.Column="6" Background="White"/>
+        <Button x:Name="Button27"  Click="Button_Click" Grid.Row="2" Grid.Column="7" Background="DarkGray"/>
+
+        <Button x:Name="Button30"  Click="Button_Click"  Grid.Row="3" Grid.Column="0" Background="DarkGray"/>
+        <Button x:Name="Button31"  Click="Button_Click"  Grid.Row="3" Grid.Column="1" Background="White"/>
+        <Button x:Name="Button32"  Click="Button_Click"  Grid.Row="3" Grid.Column="2" Background="DarkGray"/>
+        <Button x:Name="Button33"  Click="Button_Click"  Grid.Row="3" Grid.Column="3" Background="White"/>
+        <Button x:Name="Button34"  Click="Button_Click"  Grid.Row="3" Grid.Column="4" Background="DarkGray"/>
+        <Button x:Name="Button35"  Click="Button_Click"  Grid.Row="3" Grid.Column="5" Background="White"/>
+        <Button x:Name="Button36"  Click="Button_Click"  Grid.Row="3" Grid.Column="6" Background="DarkGray"/>
+        <Button x:Name="Button37"  Click="Button_Click"  Grid.Row="3" Grid.Column="7" Background="White"/>
+
+        <Button x:Name="Button40"  Click="Button_Click"  Grid.Row="4" Grid.Column="0" Background="White"/>
+        <Button x:Name="Button41"  Click="Button_Click"  Grid.Row="4" Grid.Column="1" Background="DarkGray"/>
+        <Button x:Name="Button42"  Click="Button_Click"  Grid.Row="4" Grid.Column="2" Background="White"/>
+        <Button x:Name="Button43"  Click="Button_Click"  Grid.Row="4" Grid.Column="3" Background="DarkGray"/>
+        <Button x:Name="Button44"  Click="Button_Click"  Grid.Row="4" Grid.Column="4" Background="White"/>
+        <Button x:Name="Button45"  Click="Button_Click"  Grid.Row="4" Grid.Column="5" Background="DarkGray"/>
+        <Button x:Name="Button46"  Click="Button_Click"  Grid.Row="4" Grid.Column="6" Background="White"/>
+        <Button x:Name="Button47"  Click="Button_Click"  Grid.Row="4" Grid.Column="7" Background="DarkGray"/>
+
+        <Button x:Name="Button50"  Click="Button_Click"  Grid.Row="5" Grid.Column="0" Background="DarkGray"/>
+        <Button x:Name="Button51"  Click="Button_Click"  Grid.Row="5" Grid.Column="1" Background="White"/>
+        <Button x:Name="Button52"  Click="Button_Click"  Grid.Row="5" Grid.Column="2" Background="DarkGray"/>
+        <Button x:Name="Button53"  Click="Button_Click"  Grid.Row="5" Grid.Column="3" Background="White">
+            <Image Margin="-8,-8,-8,-8" Name ="Cell55Image" Stretch="Fill"/>
+        </Button>
+        <Button x:Name="Button54"  Click="Button_Click"  Grid.Row="5" Grid.Column="4" Background="DarkGray"/>
+        <Button x:Name="Button55"  Click="Button_Click"  Grid.Row="5" Grid.Column="5" Background="White"/>
+        <Button x:Name="Button56"  Click="Button_Click"  Grid.Row="5" Grid.Column="6" Background="DarkGray"/>
+        <Button x:Name="Button57"  Click="Button_Click"  Grid.Row="5" Grid.Column="7" Background="White"/>
+
+        <Button x:Name="Button60"  Click="Button_Click"  Grid.Row="6" Grid.Column="0">
+            <Image Margin="-8,-8,-8,-8" Source="/Resources/pawn_white.png" Stretch="Fill"/>
+        </Button>
+        <Button x:Name="Button61"  Click="Button_Click"  Grid.Row="6" Grid.Column="1" Background="DarkGray">
+            <Image Margin="-8,-8,-8,-8" Source="/Resources/pawn_white.png" Stretch="Fill"/>
+        </Button>
+        <Button x:Name="Button62"  Click="Button_Click"  Grid.Row="6" Grid.Column="2">
+            <Image Margin="-8,-8,-8,-8" Source="/Resources/pawn_white.png" Stretch="Fill"/>
+        </Button>
+        <Button x:Name="Button63"  Click="Button_Click"  Grid.Row="6" Grid.Column="3" Background="DarkGray">
+            <Image Margin="-8,-8,-8,-8" Source="/Resources/pawn_white.png" Stretch="Fill"/>
+        </Button>
+        <Button x:Name="Button64"  Click="Button_Click"  Grid.Row="6" Grid.Column="4">
+            <Image Margin="-8,-8,-8,-8" Source="/Resources/pawn_white.png" Stretch="Fill"/>
+        </Button>
+        <Button x:Name="Button65"  Click="Button_Click"  Grid.Row="6" Grid.Column="5" Background="DarkGray">
+            <Image Margin="-8,-8,-8,-8" Source="/Resources/pawn_white.png" Stretch="Fill"/>
+        </Button>
+        <Button x:Name="Button66"  Click="Button_Click"  Grid.Row="6" Grid.Column="6">
+            <Image Margin="-8,-8,-8,-8" Source="/Resources/pawn_white.png" Stretch="Fill"/>
+        </Button>
+        <Button x:Name="Button67"  Click="Button_Click"  Grid.Row="6" Grid.Column="7" Background="DarkGray">
+            <Image Margin="-8,-8,-8,-8" Source="/Resources/pawn_white.png" Stretch="Fill"/>
+        </Button>
+
+        <Button x:Name="Button70"  Click="Button_Click" Grid.Row="7" Grid.Column="0" Background="DarkGray">
+            <Image Margin="-8,-8,-8,-8" Source="/Resources/rook_white.png" Stretch="Fill"/>
+        </Button>
+        <Button x:Name="Button71"  Click="Button_Click" Grid.Row="7" Grid.Column="1">
+            <Image Margin="-8,-8,-8,-8" Source="/Resources/knight_white.png" Stretch="Fill"/>
+        </Button>
+        <Button x:Name="Button72"  Click="Button_Click" Grid.Row="7" Grid.Column="2" Background="DarkGray">
+            <Image Margin="-8,-8,-8,-8" Source="/Resources/bishop_white.png" Stretch="Fill"/>
+        </Button>
+        <Button x:Name="Button73"  Click="Button_Click" Grid.Row="7" Grid.Column="3">
+            <Image Margin="-8,-8,-8,-8" Source="/Resources/king_white.png" Stretch="Fill"/>
+        </Button>
+        <Button x:Name="Button74"  Click="Button_Click" Grid.Row="7" Grid.Column="4" Background="DarkGray">
+            <Image Margin="-9,-7,-7,-9" Source="/Resources/queen_white.png" Stretch="Fill"/>
+        </Button>
+        <Button x:Name="Button75"  Click="Button_Click" Grid.Row="7" Grid.Column="5">
+            <Image Margin="-5,-7,-11,-9" Source="/Resources/bishop_white.png" Stretch="Fill"/>
+        </Button>
+        <Button x:Name="Button76"  Click="Button_Click" Grid.Row="7" Grid.Column="6" Background="DarkGray">
+            <Image Margin="-8,-8,-8,-8" Source="/Resources/knight_white.png" Stretch="Fill"/>
+        </Button>
+        <Button x:Name="Button77"  Click="Button_Click" Grid.Row="7" Grid.Column="7">
+            <Image Margin="-8,-8,-8,-8" Source="/Resources/rook_white.png" Stretch="Fill"/>
+        </Button>
+
+
+
+        <!--<UserControl 
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d" 
+             d:DesignHeight="50" d:DesignWidth="50">-->
+        <Button  Click="Button_Click"  Background="Blue" Margin="440,64,-440,-64">
+            <Image Name ="CellImage" Source="/Resources/rook_black.png" Stretch="Fill" Height="50" Width="50"/>
+        </Button>
+        <!--</UserControl>-->
+    </Grid>
+</Window>

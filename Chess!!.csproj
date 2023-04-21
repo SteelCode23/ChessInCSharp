@@ -1,0 +1,71 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <RootNamespace>Chess__</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="king_black.png" />
+    <None Remove="pawn_black.png" />
+    <None Remove="Resources\bishop_black.png" />
+    <None Remove="Resources\bishop_white.png" />
+    <None Remove="Resources\king_black.png" />
+    <None Remove="Resources\king_white.png" />
+    <None Remove="Resources\knight_black.png" />
+    <None Remove="Resources\knight_white.png" />
+    <None Remove="Resources\pawn_black.png" />
+    <None Remove="Resources\pawn_white.png" />
+    <None Remove="Resources\queen_black.png" />
+    <None Remove="Resources\queen_white.png" />
+    <None Remove="Resources\rook_black.png" />
+    <None Remove="Resources\rook_white.png" />
+    <None Remove="rook_white.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="king_black.png" />
+    <Resource Include="pawn_black.png" />
+    <Resource Include="Resources\bishop_black.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\bishop_white.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\king_black.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\king_white.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\knight_black.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\knight_white.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\pawn_black.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\pawn_white.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\queen_black.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\queen_white.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\rook_black.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\rook_white.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="rook_white.png" />
+  </ItemGroup>
+
+</Project>
